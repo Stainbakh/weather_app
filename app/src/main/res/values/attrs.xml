@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="InfoView">
+        <attr name="TimeText" format="string" />
+        <attr name="UVText" format="string" />
+        <attr name="RainText" format="string" />
+        <attr name="AQText" format="string" />
+    </declare-styleable>
+
+
+</resources>
