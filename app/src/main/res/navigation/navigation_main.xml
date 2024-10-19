@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.example.weather_app.sta.ui.MainFragment"
+        android:name="com.example.weather_app.sta.ui.main.MainFragment"
         android:label="MainFragment"
         tools:layout="@layout/fragment_main"/>
 </navigation>

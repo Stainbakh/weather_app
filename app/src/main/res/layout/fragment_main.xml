@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -9,175 +9,43 @@
     tools:context=".sta.ui.MainActivity"
     android:orientation="vertical"
     android:layout_marginVertical="10dp">
-    <FrameLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="46dp"
-        android:layout_marginHorizontal="24dp"
-        android:background="@drawable/shape_rounded_variant"
-        android:orientation="horizontal"
-        >
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginVertical="11dp"
-            android:textSize="15sp"
-            tools:text="Search Location"
-            android:textColor="#C4C4C4"
-            app:drawableEndCompat="@drawable/ic_search" >
-        </com.google.android.material.textfield.TextInputLayout>
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp">
 
-    </FrameLayout>
+        <com.google.android.material.textfield.TextInputEditText
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:id="@+id/city_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/search"
+            android:drawableEnd="@drawable/ic_search"
+            android:paddingHorizontal="20dp"
+            />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/weather_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+    </androidx.viewpager2.widget.ViewPager2>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/shape_rounded_variant"
         android:orientation="horizontal"
-        android:layout_marginTop="17dp"
         android:layout_marginHorizontal="148dp"
         android:gravity="center">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_ellipse_5"
-            android:layout_marginVertical="7dp"
-            android:layout_marginStart="16dp"
-            />
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="7dp"
-            android:layout_marginHorizontal="12dp"
-            android:src="@drawable/ic_ellipse_3"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="7dp"
-            android:layout_marginEnd="16dp"
-            android:src="@drawable/ic_ellipse_5"/>
     </LinearLayout>
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:src="@drawable/ic_sun"
-        android:layout_gravity="center"
-        android:layout_marginTop="41dp"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="21dp"
-        android:gravity="center"
-        android:fontFamily="@font/poppins_semibold"
-        android:textSize="30sp"
-        android:drawablePadding="11dp"
-        android:textColor="#2C2C2C"
-        tools:text="Moscow"
-        app:drawableEndCompat="@drawable/ic_location" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        tools:text="25"
-        android:fontFamily="@font/poppins_semibold"
-        android:textSize="70sp"
-        android:textColor="#2C2C2C"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/shape_rounded_variant"
-        android:orientation="vertical"
-        android:layout_marginHorizontal="24dp"
-        >
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:fontFamily="@font/poppins_medium"
-                android:textColor="#C4C4C4"
-                android:textSize="12sp"
-                tools:text="Time"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="68dp"
-                android:layout_marginTop="6dp"
-                android:textColor="#C4C4C4"
-                android:textSize="12sp"
-                tools:text="UV"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="68dp"
-                android:layout_marginTop="6dp"
-                android:textColor="#C4C4C4"
-                android:textSize="12sp"
-                tools:text="% Rain"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="68dp"
-                android:layout_marginTop="6dp"
-                android:textColor="#C4C4C4"
-                android:textSize="12sp"
-                tools:text="AQ"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
 
-            android:layout_marginTop="2dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:fontFamily="@font/poppins_medium"
-                android:textColor="#9A9A9A"
-                android:textSize="15sp"
-                android:layout_marginStart="20dp"
-                tools:text="11:25 AM"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="54dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginBottom="10dp"
-                android:textColor="#9A9A9A"
-                android:textSize="15sp"
-                tools:text="4"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="78dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginBottom="10dp"
-                android:textColor="#9A9A9A"
-                android:textSize="15sp"
-                tools:text="58%"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="68dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginBottom="10dp"
-                android:textColor="#9A9A9A"
-                android:textSize="15sp"
-                tools:text="22"
-                />
 
-        </LinearLayout>
-    </LinearLayout>
+
+
 </LinearLayout>

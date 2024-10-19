@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">weather_app</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="time">Time</string>
+    <string name="uv">UV</string>
+    <string name="rain">% Rain</string>
+    <string name="aq">AQ</string>
+    <string name="temprature">%1$.1f° </string>
+    <string name="search">Search location</string>
+    <string name="common_error">Something went wrong</string>
 </resources>

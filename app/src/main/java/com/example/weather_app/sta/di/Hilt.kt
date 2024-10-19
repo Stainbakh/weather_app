@@ -16,7 +16,7 @@ import retrofit2.create
 
 
 @Module
-@InstallIn
+@InstallIn(SingletonComponent::class)
 class NetworkModule {
     @Provides
 
